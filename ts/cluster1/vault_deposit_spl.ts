@@ -12,8 +12,8 @@ import {
   Address,
   BN,
 } from "@coral-xyz/anchor";
-import { WbaVault, IDL } from "../programs/wba_vault";
-import wallet from "../wba-wallet.json";
+import { WbaVault, IDL } from "../cluster1/programs/wba_vault";
+import wallet from "../cluster1/wallet/wallet.json";
 import {
   TOKEN_PROGRAM_ID,
   getOrCreateAssociatedTokenAccount,

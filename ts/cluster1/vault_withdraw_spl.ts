@@ -13,7 +13,7 @@ import {
   BN,
 } from "@coral-xyz/anchor";
 import { WbaVault, IDL } from "./programs/wba_vault";
-import wallet from "./wallet/wba-wallet.json";
+import wallet from "../cluster1/wallet/wallet.json";
 
 // Import our keypair from the wallet file
 const keypair = Keypair.fromSecretKey(new Uint8Array(wallet));
@@ -43,7 +43,7 @@ const vaultState = new PublicKey("<address>");
   // const vault = ???
 
   // Execute our enrollment transaction
-  async () => {
+  (async () => {
     try {
       // const signature = await program.methods
       // .withdraw(new BN(<number>))
@@ -54,6 +54,8 @@ const vaultState = new PublicKey("<address>");
       //     keypair
       // ]).rpc();
       // console.log(`Withdraw success! Check out your TX here:\n\nhttps://explorer.solana.com/tx/${signature}?cluster=devnet`);
+
+      console.log();
     } catch (e) {
       console.error(`Oops, something went wrong: ${e}`);
     }
